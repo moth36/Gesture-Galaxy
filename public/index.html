@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Galaxy - Hand Particle Web Design</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <video class="input_video" style="display: none;"></video>
+
+    <canvas class="output_canvas"></canvas>
+
+    <div id="home-banner" class="glass-panel">
+        <h1 class="title">Gesture Galaxy</h1>
+        <p class="subtitle">손짓으로 제어하는 우주공간</p>
+
+        <div class="instruction-Box">
+            <p class="instruction-title">권고사항</p>
+            <ul class="instruction-list">
+                <li>웹캠 권한을 허용해 주세요.</li>
+                <li>주먹 쥐기 : 파티클 모으기</li>
+                <li>손 펴기 : 파티클 퍼트리기</li>
+            </ul>
+        </div>
+        <br></br>
+
+        <button id="start-btn">우주 공간으로 입장하기</button>
+    </div>
+
+    <div id="debug-ui" class="hidden">
+        <span class="debug-label">상태 : </span>
+        <span id="hand-state-text">카메라 인식 중...</span>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

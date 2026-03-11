@@ -1,0 +1,147 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000 !important; /* 우주처럼 까만 배경 */
+    overflow: hidden; /* 스크롤바 숨기기 */
+    font-family: 'pretendard', sans-serif;
+}
+
+.output_canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: scaleX(-1); 
+}
+
+#home-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+    color: white;
+    transition: opacity 0.5s ease-out, visibility 0.5s;
+}
+
+.title {
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+    background: linear-gradient(to right, #00ffff, #d4a2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+.instruction-box {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    display: inline-block;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.instruction-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff0000;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.instruction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.instruction-list li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+}
+
+.instruction-list li:last-child {
+    margin-bottom: 0;
+}
+
+.instruction-list b {
+    color: #ffffff;
+}
+
+#start-btn {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#start-btn:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(212, 162, 255, 0.5);
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#debug-ui {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    z-index: 20;
+    transition: opacity 0.5s ease;
+}
+
+.debug-label {
+    color: #888888;
+    margin-right: 8px;
+}
+
+#hand-state-text {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+#debug-ui.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
