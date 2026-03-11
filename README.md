@@ -2,7 +2,7 @@ Gesture Galaxy (개인 프로젝트)
 
 프로젝트 소개 : 웹캠을 통해 사용자의 손동작을 실시간으로 인식하고, 화면 속 우주 파티클을 제어하는 인터랙티브 웹 디자인 프로젝트입니다.
 
-기술 스택: HTML5 (Canvas API), CSS3, Vanilla JavaScript, Google MediaPipe Hands, Firebase Hosting
+기술 스택: HTML5 (Canvas API), CSS3, js, Google MediaPipe Hands, Firebase Hosting
 
 기술 도입 배경 및 성과 :
 JavaScript 및 Canvas API 활용: 무거운 프레임워크(React, Vue 등)의 오버헤드를 배제하고, 하드웨어 가속을 활용해 수백 개의 파티클을 60FPS로 끊김 없이 렌더링하도록 최적화했습니다.
